@@ -27,3 +27,7 @@ public:
         return image;
     }
 };
+
+
+//TC : O(m*n)
+//SC : O(m*n)
