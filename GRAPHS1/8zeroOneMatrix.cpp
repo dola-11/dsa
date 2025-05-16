@@ -37,9 +37,9 @@ public:
             {
                 int nrow = row + dx;
                 int ncol = col + dy;
-                if (nrow >= 0 && ncol >= 0 && nrow < m && ncol < n && mat[nrow][ncol] == 1)
+                if (nrow >= 0 && ncol >= 0 && nrow < m && ncol < n && visited[nrow][ncol] == 0)
                 {
-                    mat[nrow][ncol] = 0;
+                    visited[nrow][ncol] = 1;
                     q.push({{nrow,ncol},dist+1});
 
                 }
