@@ -62,7 +62,10 @@ public:
         {
             if (colour[it] == -1)
             {
-                dfs(it,!col,graph,colour);
+                if (dfs(it,!col,graph,colour) == false)
+                {
+                    return false;
+                }
             }
             else if (colour[it] == col)
             {
