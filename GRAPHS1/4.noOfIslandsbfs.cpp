@@ -7,7 +7,7 @@ public:
 
         queue<pair<int,int>> q;
         q.push({i,j});
-        grid[i][j] = '1';
+        //grid[i][j] = '1';
 
         vector<pair<int,int>> directions = {{1,0},{-1,0},{0,1},{0,-1}};
 
