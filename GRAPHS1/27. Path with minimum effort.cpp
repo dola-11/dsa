@@ -51,5 +51,5 @@ public:
     }
 };
 
-//TC : O(n * m * log(n * m)) 
+//TC : O(n * m * log(n * m)) //E log(V)
 //SC : O(n * m) 
