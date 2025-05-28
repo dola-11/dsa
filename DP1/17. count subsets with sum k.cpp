@@ -1,5 +1,9 @@
 //Recursive
 //only for positive
+
+//If arr[0] = 30, target = 20, then dp[0][30] causes:
+//Runtime Error / Segmentation Fault.
+
 class Solution {
   public:
     int countFunc(vector<int> & arr, int target, int index)
