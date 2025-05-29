@@ -149,3 +149,22 @@ public:
 
 //Time: O(n × amount)
 //Space: O(2 × amount)
+
+/*
+for memoization: 
+If you're only allowed to use the 0th coin, then:
+You can form target only if it's a multiple of coins[0].
+The minimum number of coins in that case is target / coins[0].
+Otherwise, it's impossible → return a large value (1e9) to signal "invalid".
+Why is this the base case?
+Because index == 0 means you're at the smallest subproblem — only one coin type available.
+This acts like a “terminal” case for recursion.
+
+for tabulation:
+Meaning:
+You’re filling the first row (dp[0][target]), which means:
+What’s the minimum number of coins needed to make target using only the 0th coin?
+Why is this the base case?
+Because this initializes the DP table — it forms the base over which we build the solution for multiple coins.
+It directly maps to the index == 0 base case in recursion.
+*/
