@@ -36,3 +36,5 @@ class Solution {
 
 //TC : 	O(100,000 * m)
 //SC :  O(100,000 + m) ≈ O(m)
+
+//try the bfs solution
