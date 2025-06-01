@@ -40,4 +40,5 @@ class Solution {
     }
 };
 
-//O(V*E)
+//TC : O(V*E)
+//SC : O(V)
