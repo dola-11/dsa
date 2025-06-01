@@ -69,8 +69,17 @@ class Solution {
     }
 };
 
+//to detect negative weight cycles
+for (int i=0; i<n; i++)
+{
+  if (dist[i][i] < 0)
+  {
+    ....
+  }
+}
+
 //can be solved using separate cost matrix as well
 
 
 //TC : O(n^3)
-//SC : O(1) (in-place) or O(n^2) (with separate matrix)
+//SC : O(1) (in-place) or O(n^2) (with separate matrix) but recommended to say 0(n^2)
