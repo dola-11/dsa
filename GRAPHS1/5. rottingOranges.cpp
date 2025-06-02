@@ -40,7 +40,7 @@ public:
                 {
                     int nx = x + dx;
                     int ny = y + dy;
-                    if (nx >= 0 && ny >= 0 && nx < m && ny < n && grid[nx][ny] == 1)
+                    if (nx >= 0 && ny >= 0 && nx < m && ny < n && grid[nx][ny] == 1)            //this order matters, i cant use grid's condition check before the condition checks of nx,ny
                     {
                         grid[nx][ny] = 2;
                         q.push({nx,ny});
