@@ -126,3 +126,75 @@ Example 3:
 3 ► 2
 
 **/
+
+// User function Template for C++
+class DisjointSet{
+    
+  public:
+    vector<int> rank, size, parent;
+    DisjointSet(int n)
+    {
+        size.resize(n+1,1);
+        parent.resize(n+1);
+        
+        for (int i=0; i<n+1; i++)
+        {
+            parent[i] = i;
+        }
+    }
+    
+    int findUparent(int node)
+    {
+        if (node == parent[node]) return node;
+        else
+        {
+            return parent[node] = findUparent(parent[node]);
+        }
+    }
+    
+    void unionBySize(int u,int v)
+    {
+        int ulp_u = findUparent(u);
+        int ulp_v = findUparent(v);
+        if (ulp_u == ulp_v) return;
+        if (size[ulp_u]>size[ulp_v])
+        {
+            parent[ulp_v] = ulp_u;
+            size[ulp_u] += size[ulp_v];
+        }
+        else
+        {
+            parent[ulp_u] = ulp_v;
+            size[ulp_v] += size[ulp_u];
+        }
+    }
+};
+
+class Solution {
+  public:
+    int numProvinces(vector<vector<int>> adj, int V) 
+    {
+        // code here
+        DisjointSet ds(V);
+        for (int i=0; i<V; i++)
+        {
+            for (int j=0; j<V; j++)
+            {
+                if (adj[i][j] == 1)
+                {
+                    ds.unionBySize(i,j);
+                }
+            }
+        }
+        
+        int cnt = 0;
+        for (int i=0; i<V; i++)
+        {
+            if (ds.findUparent(i) == i) cnt++; //or ds.parent[i] == i
+        }
+        return cnt;
+    }
+};
+
+
+//O(v^2) for both space and time maybe
