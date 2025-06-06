@@ -66,3 +66,15 @@ class Solution {
 | --------- | ----------               |
 | **Time**  | `O(V + E) + O(V) + O(4V)`|
 | **Space** | `O(V + E)`               |
+
+/*
+Intuition Behind the Difference
+Bridge: There is no alternate path to reach an ancestor — removing the edge breaks connectivity.
+
+Articulation Point: There is no alternate way to reach ancestors through other children — removing the node breaks connectivity.
+
+Practical Use
+Use Tarjan’s Bridge version if you need to identify vulnerable connections (like cables, roads, etc.)
+
+Use Tarjan’s Articulation Point version to find vulnerable nodes (like routers, hubs, servers)
+*/
