@@ -37,3 +37,6 @@ public:
         return xorSum;
     }
 };
+
+//TC:O(N)
+//SC:O(1)
