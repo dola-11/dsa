@@ -46,5 +46,6 @@ public:
     }
 };
 
+//what if i use one stack instead of two and in place of adding in stack 2, we add in the ans and then reverse the ans?
 //TC: O(N)
 //SC: O(2N + N)
