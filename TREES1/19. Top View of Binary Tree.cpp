@@ -47,5 +47,5 @@ class Solution {
     }
 };
 
-//Time: O(N log N)
+//Time: O(N log N) -> Due to map insertions (log N each) for N nodes.
 //Space: O(N)
