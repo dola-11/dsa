@@ -8,6 +8,16 @@
  * };
  **/
 
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int data;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *      TreeNode(int val) : data(val) , left(nullptr) , right(nullptr) {}
+ * };
+ **/
+
 class Solution {
 public:
     vector<int> getInorder(TreeNode* root) 
@@ -20,7 +30,7 @@ public:
         {
             if (current -> left == NULL)
             {
-                inorder.push_back(current -> val);
+                inorder.push_back(current -> data);
                 current = current -> right;
             }
             else
@@ -33,17 +43,18 @@ public:
 
                 if (prev -> right == NULL)
                 {
-                    prev -> right == current;
+                    prev -> right = current;
                     current = current -> left;
                 }
                 else
                 {
-                    prev->right == NULL;
-                    inorder.push_back(current -> val);
+                    prev->right = NULL;
+                    inorder.push_back(current -> data);
                     current = current -> right;
                 }
             }
         }
+        return inorder;
     }
 };
 
