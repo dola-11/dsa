@@ -1,4 +1,39 @@
 // Function to push an integer into the stack.
+class ArrayStack {
+public:
+    int topPt;
+    int arr[1000];
+    ArrayStack() 
+    {
+        topPt = -1;
+    }
+    
+    void push(int x) 
+    {
+        topPt = topPt + 1;
+        arr[topPt] = x;
+    }
+    
+    int pop() 
+    {
+        if (topPt == -1) return -1;
+        int value = arr[topPt];
+        topPt = topPt - 1;
+        return value;
+    }
+    
+    int top() 
+    {
+        if (topPt == -1) return -1;
+        return arr[topPt];
+    }
+    
+    bool isEmpty() 
+    {
+        return (topPt == -1);
+    }
+};
+
 
 /*
 class MyStack
@@ -32,3 +67,6 @@ int MyStack ::pop()
 
 //TC : O(1)
 //SC : O(1)
+
+
+
