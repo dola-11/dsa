@@ -12,6 +12,8 @@ class Solution {
     Node* segregate(Node* head) 
     {
         // code here
+        if (head == nullptr || head -> next == nullptr) return head;
+        
         Node* zeroHead = new Node(-1);
         Node* oneHead = new Node(-1);
         Node* twoHead = new Node(-1);
@@ -42,9 +44,15 @@ class Solution {
                 two = two -> next;
             }
         }
-        zero -> next = oneHead -> next;
-        one -> next = twoHead -> next;
-        two->next = nullptr; 
+        
+        two->next = nullptr;
+        
+        if (oneHead->next != nullptr)
+            zero->next = oneHead->next;
+        else
+            zero->next = twoHead->next;
+
+        one->next = twoHead->next;
         return zeroHead -> next;
     }
 };
