@@ -53,9 +53,14 @@ class Solution {
             zero->next = twoHead->next;
 
         one->next = twoHead->next;
-        return zeroHead -> next;
+        
+        Node* newHead = zeroHead ->next;
+        
+        delete zeroHead;
+        delete oneHead;
+        delete twoHead;
+        return newHead;
     }
 };
-
 //TC : O(N)
 //SC : O(1)
