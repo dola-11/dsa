@@ -35,5 +35,21 @@ class Solution {
     }
 };
 
+/*
+DLLNode* newHead = nullptr;
+
+while (current != NULL) 
+{
+    last = current->prev;
+    current->prev = current->next;
+    current->next = last;
+
+    newHead = current; // update new head at each step
+    current = current->prev;
+}
+
+return newHead;
+*/
+
 //TC : O(N)
 //SC : O(1)
