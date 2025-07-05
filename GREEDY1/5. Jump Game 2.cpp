@@ -24,3 +24,6 @@ public:
 
 //TC : O(N)
 //SC : O(1)
+
+//If you use while (right < n), then:
+//The loop might execute one more time even after you've reached the end, resulting in an extra jump or even going out of bounds if not handled carefully.
