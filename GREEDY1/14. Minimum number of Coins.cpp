@@ -25,5 +25,6 @@ class Solution {
     }
 };
 
-//TC : O(N)
+//TC : O(N) , worse case
+//O(log N) avg case
 //SC : O(1)
