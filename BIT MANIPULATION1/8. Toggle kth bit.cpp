@@ -1,6 +1,6 @@
 int toggleKthBit(int n, int k)
 {
-    return (n ^ (1 << (k-1)));
+    return (n ^ (1 << (k)));
 }
 
 //TC : O(1)
