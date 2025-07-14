@@ -27,7 +27,7 @@ class Solution {
         vector<int>divisors;
         int sqrtN = sqrt(n);
         
-        for(int i=1; i<=sqrtN; i++)
+        for(int i=1; i<=sqrtN; i++)  //i*i <=N
         {
             if(n%i == 0)
             {
