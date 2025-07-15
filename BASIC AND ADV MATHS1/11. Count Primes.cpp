@@ -30,3 +30,6 @@ public:
         return cnt;
     }
 };
+
+//TC : O(n log log n)
+//SC : O(n)
