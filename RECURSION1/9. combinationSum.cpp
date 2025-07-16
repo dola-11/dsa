@@ -1,3 +1,4 @@
+//you can pick the same element multiple times (unbounded pick)
 class Solution {
 public:
     void sumCombinations(int index, int sum, int target, int n, vector<int> &candidates, vector<int> &sol, vector<vector<int>> &result)
