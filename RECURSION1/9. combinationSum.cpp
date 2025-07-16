@@ -36,3 +36,39 @@ public:
 
 // TC: O(2^n * target),  2^n from considering each element either included or excluded, T because of repeated picking of the same element to reach the target.
 // SC: exponential in the worst case.
+
+class Solution {
+public:
+    void combinations(int i, int s, vector<int>ans, int target, vector<vector<int>>&result, vector<int>&candidates)
+    {
+      
+        if (s == target)
+        {
+            result.push_back(ans);
+            return;
+        }
+ 
+
+        if (s> target || i >= candidates.size())
+        {
+            return;
+        }
+
+        //Pick current element (stay at i)
+        ans.push_back(candidates[i]);
+        combinations(i, s + candidates[i], ans, target, result, candidates);
+        ans.pop_back();
+
+        // Not pick current element (move to i+1)
+        combinations(i + 1, s, ans, target, result, candidates);
+        
+    }
+    vector<vector<int>> combinationSum(vector<int>& candidates, int target) 
+    {
+        int n = candidates.size();
+        vector<vector<int>>result;
+        vector<int>ans;
+        combinations(0,0,ans,target, result,candidates);
+        return result;
+    }
+};
