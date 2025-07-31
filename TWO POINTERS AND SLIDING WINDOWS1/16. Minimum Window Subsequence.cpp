@@ -36,3 +36,6 @@ string minWindow(string S, string T) {
 
 //TC : O(m²)
 //SC : O(1)
+
+
+//OPTIMISE with O(m*n) solution
