@@ -23,3 +23,6 @@ public:
     }
 };
 
+
+//TC :O(n log n)
+//SC : O(n)
